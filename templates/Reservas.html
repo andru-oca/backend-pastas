@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Restaurant</title>
+    <link rel="stylesheet" href="{% static './css/estilos.css'}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="{% static './img/sombrero-de-cocinero (1).png'}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a1464f2232.js" crossorigin="anonymous"></script>
+    <script src="{% static './js/main.js'}"></script>
+    <script src="{% static './js/reservas.js'}"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <section class="contenedor nav">
+                <div class="logo">
+                    <img src="{% static './img/logo.jpg'%}" alt="">
+                </div>
+                <div class="enlaces-header"> 
+                    <a href="{% url 'Index' %}">Inicio</a>
+                    <a href="{% url 'Nosotros' %}">Nosotros</a>
+                    <a href="{% url 'Menu' %}">Galería</a>
+                    <a href="{% url 'Reservas' %}">Reservas</a>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <div class="reservar">
+            <h2 class="contacto">Formulario de contacto</h2>
+            <div class="contact-wrapper">
+                <div class="contact-from">
+                        <h4>RESERVAS</h4>
+            
+                        <form id="contactForm" onsubmit="return validateForm()">
+                        <div>
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div>
+                            <label for="name">Apellido:</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div>
+                            <label for="celular">Celular:</label>
+                            <input type="tel" id="celular"required>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email"required>
+                        </div>
+                        <div>
+                            <label for="cantidad">Comensales:</label>
+                            <input type="number"  id="cantidad"required>
+                        </div>
+                        <div>
+                            <label for="fecha">Fecha:</label>
+                            <input type="date" id="fecha"required>
+                        </div>
+                        <div>
+                            <label for="horario">Horario:</label>
+                            <input type="time" id="horario"required>
+                        </div>
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Vaciar</button>
+                    </form>
+            </div>
+            <div class="contact-info">
+                <h4>Información</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot" style="color: #FD5E53"></i> Avenida Belgrano 675</li>
+                    <li><i class="fa-solid fa-phone" style="color:#FD5E53"></i> 222-333-444</li>
+                    <li><i class="fa-solid fa-envelope" style="color: #FD5E53"></i> restaurante@italiano.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ubicacion">
+        <h3>Ubicación</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2367.051415430007!2d-58.377343830549776!3d-34.61226907067582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad44e561f05%3A0x18dcf78b9cc4c787!2sAv.%20Belgrano%20675%2C%20C1092AAG%20CABA!5e0!3m2!1ses-419!2sar!4v1686350803724!5m2!1ses-419!2sar"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </main>
+    <footer>
+        <div class="partFooter">
+            <img src="{% static './img/logo.jpg'%}" alt="">
+        </div>
+        <div class="partFooter">
+            <h4>Índice</h4>
+            <a href="{% url 'Index' %}">Inicio</a>
+            <a href="{% url 'Nosotros' %}">Nosotros</a>
+            <a href="{% url 'Menu' %}">Galería</a>
+            <a href="{% url 'Reservas' %}">Reservas</a>
+        </div>
+        <div class="partFooter">
+            <h4>Redes sociales</h4>
+            <div class="social-media">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

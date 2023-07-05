@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Restaurant</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="{% static '/img/sombrero-de-cocinero (1).png'}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a1464f2232.js" crossorigin="anonymous"></script>
+    <script src="{% static './js/main.js'}"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <section class="contenedor nav">
+                <div class="logo">
+                    <img src="{% static './img/logo.jpg'%}" alt="">
+                </div>
+                <div class="enlaces-header"> 
+                    <a href="{% url 'Index' %}">Inicio</a>
+                    <a href="{% url 'Nosotros' %}">Nosotros</a>
+                    <a href="{% url 'Menu' %}">Galería</a>
+                    <a href="{% url 'Reservas' %}">Reservas</a>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <div class="contenedor">
+            <section class="contenido-main">
+                <section class="textos-main">
+                    <h3 class="parr-history">Somos un restaurante de comida italiana, fundado en 1946 por nuestros antepasados que vinieron a Argentina durante la primera guerra mundial y fundaron este restaurante para transmitir un poco de la deliciosa comida italiana</h3>
+                </section>
+                <img src="{% static 'img/italian-restaurant.jpg'}" alt="">
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="partFooter">
+            <img src="{% static './img/logo.jpg'%}" alt="">
+        </div>
+        <div class="partFooter">
+            <h4>Índice</h4>
+            <a href="{% url 'Index' %}">Inicio</a>
+            <a href="{% url 'Nosotros' %}">Nosotros</a>
+            <a href="{% url 'Menu' %}">Galería</a>
+            <a href="{% url 'Reservas' %}">Reservas</a>
+        </div>
+        <div class="partFooter">
+            <h4>Redes sociales</h4>
+            <div class="social-media">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

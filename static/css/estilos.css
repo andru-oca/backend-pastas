@@ -1,0 +1,616 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+
+.contenedor{
+    width: 100%;
+}
+h1{
+    font-weight: 700;
+    font-size: 75px;
+    color: black;
+}
+h2{
+    font-weight: 400;
+    font-size: 50px;
+    color: black;
+}
+h3{
+    font-weight: 300;
+    font-size: 35px;
+    color: black; 
+}
+h4{
+    color: rgb(52, 51, 51);
+    font-weight: 300;
+}
+/* Header */
+header::before{
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    background: white;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: ease-in-out 0.5s;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+}
+
+.nav .logo{
+    height: 80px;
+    }
+    
+    .nav .logo img{
+    height: 98%;
+    vertical-align: top;
+    }
+
+.enlaces.header{
+    font-weight: 300;
+}
+.nav .enlaces-header a{
+    color: rgb(94, 92, 92);
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 400px;
+}
+.texto{
+    font-weight: bold 700;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.item{
+    opacity: 0.5;
+}
+.container img {
+    width: 25%;
+}
+
+.restaurante{
+    justify-content: space-around;
+    margin: 5px;
+    background-color: #E8F9FD;
+    display: flex;
+    flex-wrap: wrap;
+}
+.restaurante img{
+    opacity: 1;
+    height: 600px;
+}
+
+
+#gallery {
+    background-color: rgb(254, 228, 228);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .image {
+      margin: 10px;
+    }
+    
+    .image img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+.contenido-main{
+    width: 90%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin: auto;
+}
+
+.contenido-main>img{
+    height: 400px;
+    animation: ease-in animat 2s;
+}
+
+@keyframes animat{
+    0%{
+        transform: scale(0);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+.parr-history{
+    
+        font-family: "Arial", sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+        color: #333;
+        text-align: justify;
+        margin-right: 30%;
+}
+
+.reservar{
+    margin: auto;
+    padding: 40px;
+    font-size: 20px;
+}
+
+
+.contacto{
+    color:#FD5E53;
+
+}
+
+button{
+    background: #FD5E53;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: aliceblue;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+}
+
+input{
+    display: flex;
+    margin: 4px;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background: rgb(238, 237, 237);
+    outline: 0;
+    margin-bottom: 15px;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 1em;
+}
+
+li{
+    list-style: none;
+}
+
+.ubicacion{
+    margin-left: 40px;
+}
+.ubicacion iframe{
+    width: 75%;
+    border: 2px solid black;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    height: 600px;
+}
+
+footer{
+    background: rgb(238, 237, 237);
+    padding: 60px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    height: 400px;
+}
+
+.partFooter{
+    width: 30%;
+    text-align: center;
+}
+
+.partFooter h4{
+    color: rgb(52, 51, 51);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.partFooter a{
+    display: block;
+    text-decoration: none;
+    color: lightslategray;
+    font-weight: 300;
+    transition: color .3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.partFooter a:hover{
+    color: #59CE8F;
+}
+
+.partFooter img{
+    width: 50%;
+}
+
+.social-media i{
+    font-size: 20px;
+    display: inline-block;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: all ease-in-out .3s;
+    margin-right: 5px;
+}
+
+.social-media i:hover{
+    color: white;
+    background-color: #59CE8F;
+    border-color: #59CE8F;
+}
+
+
+@media screen and (max-width: 1920px){
+    /* 
+    Acer Nitro 5	res(1920 x 1080)
+	ViewPort ( X:1920 x Y:1080 ) 
+    */
+}
+@media screen and (max-width: 1000px){
+  
+    h1{font-size: 45px;
+    font-weight: 300;}
+    h2{
+        font-weight: 300;
+        font-size: 40px;
+        color: black;
+    }
+    h3{
+        font-weight: 300;
+        font-size: 30px;
+        color: black;
+    }
+    h4{
+        color: rgb(52, 51, 51);
+        font-weight: 300;
+    }
+    
+    .nav .enlaces-header a{
+        margin-right: 15px;
+    }
+    .nav .logo{ height: 80px;}
+    
+    .nav .logo img{
+    height: 95%;
+    vertical-align: top;
+    }
+    .container {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+        font-weight: 400px;
+    }
+    .texto{
+        font-weight: bold 600;
+        font-family: Arial, Helvetica, sans-serif;
+        opacity: 1;
+        position: absolute;
+        align-content: center;
+        transform: translate(-50%, -50%);
+    }
+    .item{
+        opacity: 0.5;
+    }
+    .container img {
+        width: 25%;
+    }
+    .contenido-main{
+        width: 100%;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .contenido-main>img{
+        height: 300px;
+        animation: ease-in animat 2s;
+    }
+    
+    @keyframes animat{
+        0%{
+            transform: scale(0);
+        }100%{
+            transform: scale(1);
+        }
+    }
+    .restaurante img{
+        opacity: 1;
+        height: 400px;
+        overflow: hidden;
+    }
+    .parr-history{
+        
+            font-family: "Arial", sans-serif;
+            font-size: 20px;
+            line-height: 1;
+            color: #333;
+            text-align: justify;
+            margin-right: 20px;
+    }
+    
+    .reservar{
+        margin: auto;
+        padding: 30px;
+        font-size: 17px;
+    }
+    
+    .contacto{
+        color:#FD5E53;
+    
+    }
+    
+    button{
+        background: #FD5E53;
+        cursor: pointer;
+        border: none;
+        padding: 10px 20px;
+        color: aliceblue;
+        font-size: 15px;
+        font-weight: bold;
+        position: relative;
+    
+    }
+    
+    input{
+        display: flex;
+        margin: 1px;
+        width: 80%;
+        padding: 10px;
+        border: none;
+        background: rgb(238, 237, 237);
+        outline: 0;
+        margin-bottom: 10px;
+    
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        padding: 0.5em;
+    }
+    
+    .ubicacion{
+        margin-left: 30px;
+    }
+
+    .ubicacion iframe{
+        width: 75%;
+        border: 1px solid black;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
+        margin-top: 2px;
+        margin-bottom: 4px;
+        height: 400px;
+    }
+
+    footer{height: 500px;
+        justify-content: space-evenly;}
+    .partFooter{
+        width: 40%;
+        margin-bottom: 40px;
+    }
+    .partFooter img{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 550px){
+    h1{font-size: 30px;
+    font-weight: 100;}
+    h2{
+        font-weight: 300;
+        font-size: 40px;
+        color: black;
+    }
+    h3{
+        font-weight: 300;
+        font-size: 25px;
+        color: black;
+    }
+    h4{
+        color: rgb(52, 51, 51);
+        font-weight: 300;
+    }
+    .enlaces-header{
+        margin: 0%;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        justify-content: space-evenly;
+    }
+    .nav .enlaces-header a{
+        color: black;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .nav .logo{ height: 70px;}
+    
+    .nav .logo img{
+    height: 90%;
+    vertical-align: top;
+    }
+    .container {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+        font-weight: 700px;
+    }
+    .texto{
+        font-weight: bold 400;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .item{
+        opacity: 0.5;
+    }
+    .container img {
+        width: 25%;
+    }
+    .contenido-main{
+        width: 100%;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .contenido-main>img{
+        height: 250px;
+        animation: ease-in animat 2s;
+        width: 80%;
+    }
+    
+    @keyframes animat{
+        0%{
+            transform: scale(0);
+        }100%{
+            transform: scale(1);
+        }
+    }
+    
+    .parr-history{
+            font-family: "Arial", sans-serif;
+            font-size: 20px;
+            line-height: 1;
+            color: #333;
+            text-align: justify;
+            margin-right: 20px;
+    }
+    .image img {
+        width: 200px;
+        height: 100px;
+        object-fit: cover;
+    }    
+    .reservar{
+        margin: auto;
+        padding: 20px;
+        font-size: 15px;
+    }
+    
+    .contacto{
+        color:#FD5E53;
+    
+    }
+    
+    button{
+        background: #FD5E53;
+        cursor: pointer;
+        border: none;
+        padding: 8px 12px;
+        color: aliceblue;
+        font-size: 12px;
+        font-weight: bold;
+        position: relative;
+    
+    }
+    
+    input{
+        display: flex;
+        margin: 1px;
+        width: 90%;
+        padding: 1px;
+        border: none;
+        background: rgb(238, 237, 237);
+        outline: 0;
+        margin-bottom: 5px;
+    }
+    .contact-wrapper {
+        display: flex;
+        flex-direction:column;
+    }
+
+    .contact-info{
+        font-size: 15px;
+        margin: 10px;
+    }
+
+    .restaurante img{
+        opacity: 1;
+        height: 200px;
+    }
+
+.ubicacion{
+    margin-left: 20px;
+}
+
+    .ubicacion iframe{
+        width: 75%;
+        border: 1px solid black;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2px;
+        margin-bottom: 4px;
+        height: 300px;
+    }
+
+    footer{height: 675px;}
+    .partFooter{
+        width: 95%;
+        margin-bottom: 40px;
+    }
+    .partFooter img{
+        width: 40%;
+    }
+}
