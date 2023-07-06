@@ -1,0 +1,20 @@
+{% load static %}
+
+{% block header %}
+<header>
+    <nav>
+        <section class="contenedor nav">
+            <div class="logo">
+                <img src="{% static './img/logo.jpg'%}" alt="">
+            </div>
+            <div class="enlaces-header"> 
+                <a href="{% url 'Index' %}">Inicio</a>
+                <a href="{% url 'Nosotros' %}">Nosotros</a>
+                <a href="{% url 'Menu' %}">Galería</a>
+                <a href="{% url 'Reservas' %}">Reservas</a>
+            </div>
+        </section>
+    </nav>
+</header>
+
+{% endblock %}

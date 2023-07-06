@@ -1,43 +1,12 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Italian Restaurant</title>
-    <link rel="stylesheet" href="{% static './css/estilos.css'}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" href="{% static '/img/sombrero-de-cocinero (1).png'%}" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a1464f2232.js" crossorigin="anonymous"></script>
-    <script src="{% static './js/main.js'}"></script>
-</head>
-<body>
-    <header>
-        <nav>
-            <section class="contenedor nav">
-                <div class="logo">
-                    <img src="{% static './img/logo.jpg'%}" alt="">
-                </div>
-                <div class="enlaces-header"> 
-                    <a href="{% url 'Index' %}">Inicio</a>
-                    <a href="{% url 'Nosotros' %}">Nosotros</a>
-                    <a href="{% url 'Menu' %}">Galería</a>
-                    <a href="{% url 'Reservas' %}">Reservas</a>
-                </div>
-            </section>
-        </nav>
-        <div class="container">
-            <div class="texto"><h1>Italian Restaurant</h1></div>
-            <img class="item" src="{% static './img/pasta1.jpg'%}" alt="">
-            <img class="item" src="{% static './img/raviolis.jpg'%}" alt="">
-            <img class="item" src="{% static './img/pasta2.jpg'%}" alt="">
-            <img class="item" src="{% static './img/psata3.jpg'%}" alt="">
-        </div>
-    </header>
+
+{% block content %}
+
+    {% include "./snippets/header_nav.html" %}
+
+
     <main>
         <div class="restaurante">
             <img class="item" src="{% static './img/restaurante1.png'%}" alt="">
@@ -45,25 +14,5 @@
             <img class="item" src="{% static './img/restaurante4.jpg'%}" alt="">
         </div>
     </main>
-    <footer>
-        <div class="partFooter">
-            <img src="{% static './img/logo.jpg'%}" alt="">
-        </div>
-        <div class="partFooter">
-            <h4>Índice</h4>
-            <a href="{% url 'Index' %}">Inicio</a>
-            <a href="{% url 'Nosotros' %}">Nosotros</a>
-            <a href="{% url 'Menu' %}">Galería</a>
-            <a href="{% url 'Reservas' %}">Reservas</a>
-        </div>
-        <div class="partFooter">
-            <h4>Redes sociales</h4>
-            <div class="social-media">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+
+{% endblock %}
